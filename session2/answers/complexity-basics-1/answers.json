@@ -1,0 +1,26 @@
+{
+  "mode": "essay",
+  "quiz_title": "Complexity Basics",
+  "question": "Describe the `time` complexity of:\nA) searching a number in an unsorted list\nB) searching a number in a sorted list using binary search\nC) sorting a list using bubble sort\n\nProvide a brief explanation for each case (for example, justify why the complexity is O(n)).",
+  "student_answer": "A) In an unsorted list we check all elements to check if the searched number is equal to each element.  So is n checks, n operations, so O(n).\nB) In sorted list we check one element in a certain index ( middle index) and the iteration 2 checks again one element and discard half of what left. Overall i will check base 2 logn times and complexity is O(logn).\nC) In bubble sort we in first iteration check all items once so n times, then in second iteration n-1 times, then n-2 times etc but in the limit of infinite the -1 , -2 , -3 etc are insignificant so we do n checks for each of n iterations so O(n^2) times.",
+  "points_awarded": 6.0,
+  "total_points": 6,
+  "score_percent": 100.0,
+  "did_well": [
+    "Correctly identified O(n) for unsorted search with a valid explanation of checking each element.",
+    "Correctly identified O(log n) for binary search, specifically mentioning that the list is sorted and the search space is halved.",
+    "Correctly identified O(n^2) for bubble sort and provided a logical explanation of the nested iteration structure (n checks for n iterations)."
+  ],
+  "missing": [],
+  "suggestions": [
+    "For bubble sort, you could also mention that the best-case complexity is O(n) if an early-stop optimization is used when the list is already sorted."
+  ],
+  "ai_unavailable": false,
+  "ai_error": "",
+  "ai_reason": "none",
+  "scoring_mode": "llm_rubric",
+  "scoring_confidence": "high",
+  "ai_provider": "gemini",
+  "ai_provider_requested": "auto",
+  "ai_model": "gemini-flash-latest"
+}

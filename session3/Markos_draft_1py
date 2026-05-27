@@ -1,0 +1,13 @@
+class Portfolio:
+    def __init__(self):
+        self.assets = ["NVDA", "AMD", "Venture Global"]
+
+    # You override the system method to make your custom class an ITERABLE
+    def __iter__(self):
+        return iter(self.assets)
+
+my_portfolio = Portfolio()
+
+# Because you used the dunder method, this clean loop now works perfectly!
+for asset in my_portfolio:
+    print(asset)

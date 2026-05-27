@@ -1,0 +1,32 @@
+{
+  "mode": "essay",
+  "quiz_title": "choose the better cleaning approach",
+  "question": "Assume that `my_data` is a list with many rows, and some values are missing (represented as empty strings \"\").\n\nYou can:\n1. Clean in place (modify the original list directly), or\n2. Copy first to a new list, then clean the copied list.\n\nCompare the two approaches in terms of:\n- time complexity\n- space complexity\n- risk/safety\n\nThen explain which option you would choose for:\n- a quick one-off local script\n- a production workflow where raw data must be preserved\n\nBe specific with Big-O notation (for example `O(n)`, `O(1)`, `O(n)` extra space).",
+  "student_answer": "for cleaning  in line the time complexity is O(n) because double the data or errors to clean means double the tasks , and space is O(1) because if we get double the data or errors to clean we use the same space as before. for copying first and then cleaning, the bigger the data to clean similarly to before the checks are O(2n) or actually O(n) and we have n tasks when copying and n tasks when checking-cleaning. as for space we require n to store the pointers. ( if is deepcopy we store the values but assume we talk about shallow copy). now about risk/safety. If is shallow copy we in both cases lose the original data if we change the list and someone could argue the second is riskier because it could have someone create false sense of security. if is deepcopy then we truly have the original received data list protected from errorneous cleans and then we start cleaining. Now, if we have deep-copy then the time is O(n) but this time it saves the data instead of pointers. and space complexity would be same as with shallow copy but the safety would be greater. For a raw one off maybe I would choose the first approach to save space but if in production i would choose deepcopy.",
+  "points_awarded": 3.75,
+  "total_points": 4,
+  "score_percent": 93.75,
+  "did_well": [
+    "Correctly identified Big-O notation for time and space complexities for both approaches.",
+    "Provided a logical explanation for why space complexity differs (extra memory for pointers/values).",
+    "Successfully identified the risks of data loss associated with in-place modification.",
+    "Corrected recommended specific approaches for local scripts versus production environments."
+  ],
+  "missing": [
+    "The student used the term 'in line' rather than the standard technical term 'in-place' requested by the rubric.",
+    "The structure is a single dense paragraph, which makes it slightly less 'clear and easy to follow' compared to a formatted response."
+  ],
+  "suggestions": [
+    "Use standard industry terminology such as 'in-place' to improve technical communication.",
+    "Utilize bullet points or separate paragraphs to distinguish between complexity, risk, and context-aware choices.",
+    "Improve grammatical clarity to ensure the reasoning (such as the distinction between shallow and deep copies) is easier to parse."
+  ],
+  "ai_unavailable": false,
+  "ai_error": "",
+  "ai_reason": "none",
+  "scoring_mode": "llm_rubric",
+  "scoring_confidence": "high",
+  "ai_provider": "gemini",
+  "ai_provider_requested": "auto",
+  "ai_model": "gemini-flash-latest"
+}
